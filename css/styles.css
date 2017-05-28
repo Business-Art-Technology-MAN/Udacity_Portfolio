@@ -2,41 +2,42 @@
 body {
     padding: 0 5px;
     margin: 0 0;
-    background-color: rgb(100, 100, 100);
+    background: rgb(100, 100, 100);
     font-family: Lato, sans-serif;
 }
-header nav footer main section article {
+
+* {
     box-sizing: border-box;
 }
-img embed object video picture figure {
+
+img, embed, object, video, picture, figure {
     max-width: 100%;
 }
+
 h1 {
-    font-family: Lato, sans-serif;
-    font-weight: normal;
-    font-size: 42px;
+    font: normal 42px Lato, sans-serif;
     color: rgb(60, 60, 60);
     text-align: right;
     margin: 0 0;
 }
+
 h2 {
-    font-family: 'Great Vibes', cursive;
-    font-weight: 100;
-    font-size: 36px;
+    font: 100 36px 'Great Vibes', cursive;
     margin: 0.3rem 0 0 0;
     text-align: center;
 }
+
 h3 {
-    font-family: Lato, sans-serif;
-    font-weight: 100;
-    font-size: 32px;
+    font: 100 32px Lato, sans-serif;
     color: rgb(255, 226, 140);
     margin: 0 0;
 }
+
 p {
     text-align: center;
     margin: 0 0 0.25rem;
 }
+
 /*styles for the header layout */
 .header-layout {
     max-width: 100%;
@@ -45,6 +46,7 @@ p {
     display: block;
     border-bottom: 3px solid rgb(255, 226, 140);
 }
+
 .logo-type {
     max-width: 100%;
     font-family: 'Great Vibes', cursive;
@@ -52,45 +54,56 @@ p {
     margin: 0.3rem auto 0 auto;
     color: rgb(60, 60, 60);
 }
+
 .name-title {
     vertical-align: center;
     text-align: right;
     margin: auto 0;
     max-width: 100%;
 }
+
 /*styles for main content section */
 .section-header {
     max-width: 100%;
     margin: 1.5em auto;
 }
+
 /*css layout for wrapping small pictures on small displays*/
 .three-up {
     max-width: 100%;
-} 
+}
+
 .figure-group {
     max-width: 100%;
     margin: 0;
     padding: 0;
 }
+
 .figure-group figcaption {
     text-align: center;
 }
+
 .figure-group img {
     display: block;
     margin: auto;
 }
-/*responsive image */
+
+/*responsive image 
 .rescale-image {
     max-width: 100%;
-}
+}*/
+
+/*tablet sized screens*/
 @media screen and (max-width: 959px) and (min-width: 693px)  {
     /*styles for the header layout */
     .logoType {
         float: left;
     }
+
     .name-title {
         float: right;
     }
+
     /*css layout for wrapping small pictures on large displays*/
     .three-up {
         max-width: 100%;
@@ -99,31 +112,39 @@ p {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-    } 
+    }
+
     .three-up::after {
         content: "";
         flex: auto;
     }
+
     .figure-group {
         margin: 0;
     }
 }
+
+/*layout for large screens*/
 @media screen and (min-width:960px)  {
     body {
         max-width: 960px;
         margin: 0 auto;
     }
+
     /*styles for the header layout */
     .header-layout {
         margin: 1.5rem auto;
         padding-bottom: 1.5rem;
-    }  
+    }
+
     .logo-type {
         float: left;
     }
+
     .name-title {
         float: right;
     }
+
     /*css layout for wrapping small pictures on large displays*/
     .three-up {
         max-width: 100%;
@@ -131,7 +152,8 @@ p {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-    } 
+    }
+
     .figure-group {
         margin: 0 auto;
     }  
